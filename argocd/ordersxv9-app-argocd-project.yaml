@@ -1,0 +1,15 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: ordersxv9-app
+  namespace: devhub
+spec:
+  project: ordersxv9-app
+  destinations:
+    - name: local
+      namespace: devhub
+      server: 'https://kubernetes.default.svc'
+  sourceRepos:
+    - https://github.com/devhub-mad/ordersxv9-app-gitops
+  

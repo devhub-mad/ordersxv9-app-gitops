@@ -1,0 +1,23 @@
+app:
+  name: ordersxv9-app
+  namespace: devhub
+  cluster: .apps.cluster-wxd7f.wxd7f.sandbox1985.opentlc.com
+
+git:
+  branch: main
+  repo: https://github.com/devhub-mad/ordersxv9-app
+  org: devhub-mad
+  name: ordersxv9-app
+
+image:
+  host: image-registry.openshift-image-registry.svc:5000/devhub
+  name: ordersxv9-app
+  tag: latest
+
+
+pipelineStorage:
+  pvcSize: 2Gi
+  storageClassName: ""
+
+targetEnvironment: dev
+env: []
